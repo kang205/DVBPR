@@ -1,0 +1,14 @@
+cd DVBPR
+wget http://cseweb.ucsd.edu/~wckang/DVBPR/DVBPR_auc_100_39728.ckpt.data-00000-of-00001
+wget http://cseweb.ucsd.edu/~wckang/DVBPR/DVBPR_auc_100_39728.ckpt.index
+wget http://cseweb.ucsd.edu/~wckang/DVBPR/DVBPR_auc_100_39728.ckpt.meta
+wget http://cseweb.ucsd.edu/~wckang/DVBPR/DVBPR.log
+cd ../GAN
+mkdir checkpoint
+cd checkpoint
+mkdir AmazonFashion6ImgPartitioned.npy_16_64_64
+cd AmazonFashion6ImgPartitioned.npy_16_64_64
+wget http://cseweb.ucsd.edu/~wckang/DVBPR/DCGAN.model-311502.data-00000-of-00001
+wget http://cseweb.ucsd.edu/~wckang/DVBPR/DCGAN.model-311502.index
+wget http://cseweb.ucsd.edu/~wckang/DVBPR/DCGAN.model-311502.meta
+wget http://cseweb.ucsd.edu/~wckang/DVBPR/checkpoint
