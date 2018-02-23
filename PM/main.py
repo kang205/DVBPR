@@ -1,20 +1,11 @@
-
-
-
-# In[1]:
-
-
 import sys
-import gzip
 import math
 import json
-import ujson
 import random
 import time
 from PIL import Image
 import Queue
 import scipy.misc
-import msssim
 
 import numpy as np
 

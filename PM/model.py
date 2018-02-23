@@ -74,7 +74,7 @@ class DCGAN(object):
         self.input_fname_pattern = input_fname_pattern
         self.checkpoint_dir = checkpoint_dir
 
-        _,_,_,self.data,_,_=np.load(self.dataset_name)
+        _,_,_,self.data,_,_=np.load('../'+self.dataset_name)
 
         #self.data = glob(os.path.join("./data", self.dataset_name, self.input_fname_pattern))
         #self.c_dim = imread(self.data[0]).shape[-1]
