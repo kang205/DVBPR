@@ -23,7 +23,14 @@ Requirements:
 
 ## Datasets
 
-The four fashion datasets (*AmazonFashion*, *AmazonWomen*, *AmazonMen*, *Tradesy*) can be downloaded via
+The four fashion datasets:
+
+- *AmazonFashion (3.3GB)* : 64K users, 234K images, 0.5M actions
+- *AmazonWomen (6.2GB)*: 97K users, 347K images, 0.8M actions
+- *AmazonMen (2.1GB)*: 34K users, 110K images, 0.2M actions
+- *Tradesy (3.4GB)*: 33K users, 326K images, 0.6M actions
+
+can be downloaded via
 
 ```
 bash download_dataset.sh 
