@@ -2,7 +2,7 @@
 
 This is our TensorFlow implementation for the paper:
 
-*Wang-Cheng Kang, Chen Fang, Zhaowen Wang, Julian McAuley. Visually-Aware Fashion Recommendation and Design with Generative Image Models. In Proceedings of IEEE International Conference on Data Mining (ICDM'17) ([perm_link](http://ieeexplore.ieee.org/document/8215493/), [pdf](http://cseweb.ucsd.edu/~jmcauley/pdfs/icdm17.pdf))*
+Wang-Cheng Kang, Chen Fang, Zhaowen Wang, Julian McAuley. *[Visually-Aware Fashion Recommendation and Design with Generative Image Models.](http://cseweb.ucsd.edu/~jmcauley/pdfs/icdm17.pdf)* In Proceedings of IEEE International Conference on Data Mining (ICDM'17)
 
 Please cite our paper if you use the code or datasets.
 
@@ -15,21 +15,23 @@ We provide the three modules in our framework:
 ## Environment
 The code is tested under a Linux desktop with a single GTX-1080 Ti GPU.
 
-- Tensorflow:  1.3
+Requirements:
+
+- Tensorflow 1.3
 - Numpy
 - PIL
 
 ## Datasets
 
-The four fashion datasets can be downloaded via
+The four fashion datasets (*AmazonFashion*, *AmazonWomen*, *AmazonMen*, *Tradesy*) can be downloaded via
 
 ```
 bash download_dataset.sh 
 ```
 
-All datasets are stored in *.npy* format, each item is associated with a JPG image. Please refer to DVBPR code for detail usage.
+All datasets are stored in *.npy* format, each item is associated with a JPG image. Please refer to DVBPR code for detail usage. For image generation, we mainly use the *AmazonFashion* dataset.
 
-Amazon datasets are derived from [here](http://jmcauley.ucsd.edu/data/amazon/), tradesy dataset is introducde in [here](http://jmcauley.ucsd.edu/data/tradesy/). Please cite the corresponding papers if you use the datasets.
+Amazon datasets are derived from [here](http://jmcauley.ucsd.edu/data/amazon/), tradesy dataset is introduced in [here](http://jmcauley.ucsd.edu/data/tradesy/). Please cite the corresponding papers if you use the datasets.
 
 **Please note the raw images are for academic use only.**
 
@@ -50,7 +52,7 @@ The default hyper-parameters are defined in *main.py*, you can change them accor
 cd GAN
 python main.py --train True
 ```
-The default hyper-parameters are defined in *main.py*, you can change them accordingly.
+The default hyper-parameters are defined in *main.py*, you can change them accordingly. Without '--train True', it will load a trained model and generated images for each category (stroed in folder *samples*).
 
 **Step 3:** Preference Maximization:
 
@@ -58,6 +60,8 @@ The default hyper-parameters are defined in *main.py*, you can change them accor
 cd PM
 python main.py
 ```
+
+PM is based on pretrained DVBPR and GAN models. It will randomly pick a user for each category, and show the generated images through the optimization process.
 
 With a single GTX-1080 Ti, training DVBPR and GANs take around 7 hours respectively.
 
@@ -67,6 +71,8 @@ A quick way to use our model is using pretrained models which can be acquired vi
 ```
 bash download_pretrained_models.sh 
 ```
+
+With pretrained models, you can see the AUC results of DVBPR, and run GAN and PM code to generate images.
 
 ## Misc
 
