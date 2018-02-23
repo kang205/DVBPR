@@ -17,7 +17,7 @@ The code is tested under a Linux desktop with a single GTX-1080 Ti GPU.
 
 Requirements:
 
-- Tensorflow 1.3
+- TensorFlow 1.3
 - Numpy
 - PIL
 
