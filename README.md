@@ -1,5 +1,9 @@
 # Personalized Fashion Recommendation and Generation
 
+<p align="center">
+<img src="fig.png" width="400">
+</p>
+
 This is our TensorFlow implementation for the paper:
 
 Wang-Cheng Kang, Chen Fang, Zhaowen Wang, Julian McAuley. *[Visually-Aware Fashion Recommendation and Design with Generative Image Models.](http://cseweb.ucsd.edu/~jmcauley/pdfs/icdm17.pdf)* In Proceedings of IEEE International Conference on Data Mining (ICDM'17)
