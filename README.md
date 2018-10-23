@@ -1,7 +1,7 @@
 # Personalized Fashion Recommendation and Generation
 
 <p align="center">
-<img src="fig.png" width="700">
+<img src="fig.png" width="600">
 </p>
 
 This is our TensorFlow implementation for the paper:
